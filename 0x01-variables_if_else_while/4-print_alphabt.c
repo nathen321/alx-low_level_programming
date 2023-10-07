@@ -8,11 +8,7 @@ int main(void)
 	char alph = 97;
 
 	for (alph = 97; alph <= 122; alph++)
-		if (alph == 'q')
-			alph++;
-		else if (alph == 'e')
-			alph++;
-		else
+		if (alph != 'q' && alph != 'e')
 			putchar(alph);
 
 	putchar('\n');
