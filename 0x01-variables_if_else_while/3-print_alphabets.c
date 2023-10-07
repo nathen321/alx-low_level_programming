@@ -11,7 +11,6 @@ int main(void)
 
 	for (alph = 97; alph <= 122; alph++)
 		putchar(alph);
-	putchar('\n');
 	for (alphcap = 'A'; alphcap <= 'Z'; alphcap++)
 		putchar(alphcap);
 	putchar('\n');
