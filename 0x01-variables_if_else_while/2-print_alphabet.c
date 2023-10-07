@@ -6,6 +6,7 @@
 int main(void)
 {
 	char alph = 97;
+
 	for (alph = 97; alph <= 122; alph++)
 		putchar(alph);
 	putchar('\n');
