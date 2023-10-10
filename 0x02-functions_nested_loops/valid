@@ -1,4 +1,5 @@
-#!bin/bash
+#!/bin/bash
 git add .
-git commit - "ok"
+git commit -m "ok"
 git push
+
