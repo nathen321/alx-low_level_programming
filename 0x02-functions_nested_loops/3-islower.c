@@ -2,6 +2,8 @@
 /**
  * _islower - check for lower case char
  *
+ * @c: is the what wil be tested
+ *
  * Return: 1 (Success)
  */
 int _islower(int c)
