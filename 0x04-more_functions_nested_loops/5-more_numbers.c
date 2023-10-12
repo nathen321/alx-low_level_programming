@@ -8,19 +8,18 @@ void more_numbers(void)
 {
 	int num = 48;
 	int i;
+	int a;
 
 	for (i = 0; i <= 10; i++)
 	{
-		int i;
-
 		for (num = 48; num < 58; num++)
 		{
 			_putchar(num);
 		}
-		for (i = 48; i < 53; i++)
+		for (a = 48; a < 53; a++)
 		{
 			_putchar(49);
-			_putchar(i);
+			_putchar(a);
 		}
 		_putchar('\n');
 	}
