@@ -2,7 +2,6 @@
 /**
  * print_most_numbers - function that print all numbers from
  *0 to 9
- *
  *Return: returns nothing
 */
 void print_most_numbers(void)
@@ -14,7 +13,7 @@ void print_most_numbers(void)
 		if ((num == 52) || (num == 50))
 		{
 			continue;
-		}	
+		}
 		_putchar(num);
 	}
 	_putchar('\n');
