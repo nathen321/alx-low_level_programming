@@ -11,9 +11,16 @@ void more_numbers(void)
 
 	for (i = 0; i <= 10; i++)
 	{
+		int i;
+
 		for (num = 48; num < 58; num++)
 		{
 			_putchar(num);
+		}
+		for (i = 48; i < 53; i++)
+		{
+			_putchar(49);
+			_putchar(i);
 		}
 		_putchar('\n');
 	}
