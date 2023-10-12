@@ -4,12 +4,13 @@
  * Return: void
  */
 void print_numbers(void)
+void print_numbers(void)
 {
-	int i = 48;
+	int num = 48;
 
-	for (; i < 58; i++)
+	for (num = 48; num < 58; num++)
 	{
-		_putchar(i);
+		_putchar(num);
 	}
-	_putchar('\n');
+	_putchar(10);
 }
