@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - A program that prints the numbers from 1 to 100
- * return: 0
+ * Return: return 0
  */
 int main(void)
 {
@@ -17,13 +17,13 @@ int main(void)
 		{
 			printf("Fizz ");
 		}
-		else if ((i % 5) == 0 && (i % 3) != 0)
+		else if ((i % 5) == 0)
 		{
 			 printf("Buzz ");
 		}
 		else
 		{
-			printf("%u ", i);
+			printf("%d ", i);
 		}
 	}
 	printf("\n");
