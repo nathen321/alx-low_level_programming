@@ -1,20 +1,31 @@
 #include <stdio.h>
 /**
- * FizzBuzz - A program that prints the numbers from 1 to 100
+ * main - A program that prints the numbers from 1 to 100
+ * retur: 0
  */
-void FizzBuzz(void)
+int main(void)
 {
 	int i;
 
 	for (i = 1; i <= 100; i++)
 	{
 		if ((i % 3) == 0 && (i % 5) == 0)
-			printf("FizzBuzz ");
+		{
+			printf("FizzBuzz\n");
+		}
 		else if ((i % 3) == 0)
-			printf("Fizz ");
+		{
+			printf("Fizz\n");
+		}
 		else if ((i % 5) == 0)
-			 printf("Buzz ");
+		{
+			 printf("Buzz\n");
+		}
 		else
-			printf("%d "; i);
+		{
+			printf("%u\n", i);
+		}
 	}
+	printf("\n");
+	return (0);
 }
