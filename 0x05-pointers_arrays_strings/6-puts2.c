@@ -10,7 +10,7 @@ void puts2(char *str)
 
 	while (str[y] != '\0')
 		y++;
-	for (z = 0; z <= y; z += 2)
+	for (z = 0; z < y; z += 2)
 		_putchar(str[z]);
 	_putchar('\n');
 }
