@@ -2,7 +2,7 @@
 /**
  * _strlen - counte the lenght of a string
  * @s: the string
- * returne: 0
+ * returne: string length
  */
 int _strlen(char *s)
 {
