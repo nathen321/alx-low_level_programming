@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * *_strcat - concatenates two strings.
+ * *_strncat - concatenates two strings.
  * @src: the string to be added
  * @dest: were to add it
  * @n: it will use at most n bytes from src
