@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * *string_toupper - concatenates two strings.
- * @*: argument 1
+ * @n: argument 1
  * Return: char
  */
 char *string_toupper(char *n)
