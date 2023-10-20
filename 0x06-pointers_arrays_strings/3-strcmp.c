@@ -1,10 +1,9 @@
 #include "main.h"
 /**
- * _strncmp - concatenates two strings.
- * @src: argument
- * @dest: argument 2
- * @n: it will use at most n bytes from src
- * Return: dest - src
+ * _strcmp - concatenates two strings.
+ * @s1: argument 1
+ * @s2: argument 2
+ * Return: s1 - s2
  */
 int _strcmp(char *s1, char *s2)
 {
