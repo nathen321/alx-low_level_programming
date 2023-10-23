@@ -13,7 +13,7 @@ char *_strchr(char *s, char c)
 	{
 		if (c == s[x])
 		{
-			s += x + 1;
+			s += x - 1;
 			return (s);
 		}
 		x++;
