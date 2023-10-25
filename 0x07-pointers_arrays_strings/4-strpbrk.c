@@ -9,7 +9,7 @@
   */
 char *_strpbrk(char *s, char *accept)
 {
-	unsigned int z = 0, x;
+	int z = 0, x;
 
 	while (s[z])
 	{
@@ -17,7 +17,7 @@ char *_strpbrk(char *s, char *accept)
 
 		while (accept[x])
 		{
-			if (accept[z] == s[x])
+			if (accept[x] == s[z])
 			{
 				s  += z;
 				return (s);
