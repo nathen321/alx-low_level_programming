@@ -7,11 +7,11 @@
  */
 int _strlen_recursion(char *s)
 {
-	int sum = 0;
+	int sum = 1;
 
 	if (s[0] == '\0')
 	{
-		return (1);
+		return (sum - 1);
 	}
 	sum += _strlen_recursion(s + 1);
 	return (sum);
