@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _print_rev_recursion - check the code
- * @s: what to print
- * Return: void.
+ * factorial - check the code
+ * @n: what to print
+ * Return: int
  */
 int factorial(int n)
 {
