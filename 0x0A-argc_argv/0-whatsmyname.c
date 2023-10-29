@@ -5,7 +5,7 @@
   * main - print the commend used
   * @argc: cont
   * @argv: commend
-  * return: alway 0
+  * Return: alway 0
   */
 int main(int argc, char *argv[])
 {
