@@ -6,7 +6,7 @@
 /**
  * str_concat- create an array
  * @s1: content of the array
- * @s1: content of the array
+ * @s2: content of the array
  * Return: array.
  */
 char *str_concat(char *s1, char *s2)
