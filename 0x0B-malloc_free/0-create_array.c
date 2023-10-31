@@ -15,8 +15,8 @@ char *create_array(unsigned int size, char c)
 
 	if (size == 0)
 		return (NULL);
-	t = malloc(sizeof(t) * c);
-	for (x = 0; x <= size; x++)
+	t = malloc(sizeof(t) * size);
+	for (x = 0; x < size; x++)
 		t[x] = c;
 	return (t);
 }
