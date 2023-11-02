@@ -4,6 +4,9 @@
 
 /**
  * string_nconcat - check the code
+ * @s1: par
+ * @s2: par
+ * @n: par
  *
  * Return: Always 0.
  */
