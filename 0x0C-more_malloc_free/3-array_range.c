@@ -4,9 +4,9 @@
 #include <string.h>
 
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
+ * array_range - a function that creates an array of integers
+ * @max: max int
+ * @min: min int
  *
  * Return: Nothing.
  */
