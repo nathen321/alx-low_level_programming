@@ -33,5 +33,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		t[y] = s2[z];
 		z++;
 	}
+	t[y] = '\0';
 	return (t);
 }
