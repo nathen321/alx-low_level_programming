@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * init_dog - creat a dogo
+ * free_dog - free the dogo
  * @d: the dogo
  *
  * Return: Always 0.
