@@ -3,9 +3,10 @@
 #include "variadic_functions.h"
 
 /**
- * main - check the code
+ * sum_them_all - ....
+ * @n: ....
  *
- * Return: Always 0.
+ * Return: Always sum.
  */
 int sum_them_all(const unsigned int n, ...)
 {
@@ -15,13 +16,13 @@ int sum_them_all(const unsigned int n, ...)
 	if (n == 0)
 		return (0);
 
-	va_start (ap, n);
+	va_start(ap, n);
 
 	sum = 0;
 	for (x = 0; x < n; x++)
 	{
-		sum += va_arg (ap, int);
+		sum += va_arg(ap, int);
 	}
-	va_end (ap);
+	va_end(ap);
 	return (sum);
 }
