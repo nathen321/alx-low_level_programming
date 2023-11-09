@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "calc.h"
+#include "3-calc.h"
 #include <stdlib.h>
 #include <string.h>
 
