@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * list_t - check the code
+ * list_len - check the code
  * @h: ....
  *
  * Return: Always count.
