@@ -8,14 +8,22 @@
  * @head: ....
  * Return: Always head.
  */
-void free_listint2(listint_t **head);
+void free_listint2(listint_t **head)
 {
+	listint_t *temp;
+
 	if (head)
 	{
-		if (head->next)
+		while (*head)
 		{
-			free_listint(head->next);
+			temp = *head;
+			*head = (*head)->next;
+			free(temp);
 		}
-		free(head);
 	}
+	else
+	{
+	return;
+	}
+	free(*head);
 }
