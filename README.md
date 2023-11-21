@@ -1,1 +1,1 @@
-c is awsome
+linked list testing
