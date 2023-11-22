@@ -6,7 +6,8 @@
 /**
  * insert_nodeint_at_index - check the code
  * @head: ...
- * @index: ....
+ * @idx: ....
+ * @n: ....
  * Return: Always 0.
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
@@ -36,5 +37,5 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	new->next = temp->next;
 	temp->next = new;
-	return (new);
+	return (temp);
 }
