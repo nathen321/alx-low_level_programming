@@ -11,9 +11,9 @@
 int pop_listint(listint_t **head)
 {
 	listint_t *temp;
-	int tam;
+	int tam = 0;
 
-	if (head)
+	if (*head)
 	{
 		temp = (*head)->next;
 		tam = (*head)->n;
