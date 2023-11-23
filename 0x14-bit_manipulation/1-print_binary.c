@@ -2,8 +2,8 @@
 #include "main.h"
 
 /**
- * binary_to_uint - check the code
- * @b: ...
+ * print_binary - check the code
+ * @n: ...
  *
  * Return: Always 0.
  */
@@ -21,5 +21,5 @@ void print_binary(unsigned long int n)
 		}
 	}
 	else
-		return;
+		_putchar('0');
 }
