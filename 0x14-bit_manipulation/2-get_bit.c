@@ -8,25 +8,24 @@
   */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	if (n)
-		return (getbit(n, index));
-	return (-1);
-}
-/**
-  * getbit - ...
-  * @n: ...
-  * @index: ...
-  * Return: ...
-  */
-int getbit(unsigned long int n, unsigned int index)
-{
-	if (index == 0)
+	unsigned int comp_i = 0;
+
+	while (n)
 	{
-		if (n & 1)
-			return (1);
-		else
-			return (0);
+		if (comp_i == index)
+		{
+			if (n % 2)
+				return (1);
+			else
+				return (0);
+		}
+
+		n = n / 2;
+		comp_i++;
 	}
 
-	return (get_bit(n >> 1, index - 1));
+	if (index > comp_i && index < 63)
+		return (0);
+
+	return (-1);
 }
