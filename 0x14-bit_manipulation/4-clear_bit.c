@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * set_bit - check the code
+ * clear_bit - check the code
  * @n: ....
  * @index: .....
  * Return: Always 0.
