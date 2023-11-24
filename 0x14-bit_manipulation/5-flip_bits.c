@@ -2,7 +2,9 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * flip_bits - check the code
+ * @n: ...
+ * @m: ....
  *
  * Return: Always 0.
  */
