@@ -1,15 +1,18 @@
 #include <stdio.h>
 #include "main.h"
+int get_bit(unsigned long int n, unsigned int index)
+{
+	return (getbit(n, index));
+	return (-1);
+}
 /**
-  * get_bit - ...
+  * getbit - ...
   * @n: ...
   * @index: ...
   * Return: ...
   */
-int get_bit(unsigned long int n, unsigned int index)
+int getbit(unsigned long int n, unsigned int index)
 {
-	if (!n || !index)
-		return (-1);
 	if (index == 0)
 	{
 		if (n & 1)
