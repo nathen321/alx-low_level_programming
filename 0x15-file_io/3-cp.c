@@ -31,7 +31,7 @@ void copy(const char *file1, const char *file2)
 	int ifp, ofp, readed;
 	char buff[1024];
 
-	ifp; = open(file1, O_RDONLY);
+	ifp = open(file1, O_RDONLY);
 	if (!file1 || ifp == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1);
