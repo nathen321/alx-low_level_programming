@@ -42,7 +42,10 @@ void copy(const char *file1, const char *file2)
 	while ((readed = read(ifp, buff, 1024)) > 0)
 	{
 		if (write(ofp, buff, readed) != readed || ofp == -1)
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2), exit(99);
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2);
+			exit(99);
+		}
 	}
 	if (readed == -1)
 	{
