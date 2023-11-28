@@ -42,16 +42,20 @@ void copy(const char *file1, const char *file2)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2), exit(99);
 	}
 	if (readed == -1)
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1), exit(98);
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1);
+		exit(98);
+	}
+
+	if (close(ofp) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ofp);
+		exit(100);
+	}
 
 	if (close(ifp) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ifp);
-		exit(100);
-	}
-	if (close(ofp) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ofp);
 		exit(100);
 	}
 }
