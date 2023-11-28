@@ -1,63 +1,69 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include "main.h"
+#include "holberton.h"
 
 /**
- * main - copy file into file
- * @argc: ...
- * @argv: ...
- *
- * Return: Always 0.
- */
+  * main - Entry point
+  * @argc: The argument count
+  * @argv: The argument vector
+  *
+  * Return: ...
+  */
 int main(int argc, char **argv)
 {
 	if (argc != 3)
 	{
-		dprintf(2, "Usage: %s file_from file_to\n", argv[0]);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	copy(argv[1], argv[2]);
-	return (0);
+
+	copy_file(argv[1], argv[2]);
+	exit(0);
 }
 
 /**
- * copy - copy file into file
- * @file1: ....
- * @file2: ....
- *
- * Return: Always 0.
- */
-void copy(const char *file1, const char *file2)
+  * copy_file - ...
+  * @src: ...
+  * @dest: ...
+  *
+  * Return: ...
+  */
+void copy_file(const char *src, const char *dest)
 {
-	int ifp, ofp, readed;
+	int ofd, tfd, readed;
 	char buff[1024];
-	mode_t perm = S_IRUSR | S_IWUSR | S_IWGRP | S_IRGRP | S_IROTH;
 
-	ifp = open(file1, O_RDONLY);
-	ofp = open(file2, O_CREAT | O_WRONLY | O_TRUNC, perm);
-
-	if (ifp == -1 || !file1)
-		dprintf(2, "Error: Can't read from file %s\n", file1), exit(98);
-
-	if (ofp == -1)
-		dprintf(2, "Error: Can't write to %s\n", file2), exit(99);
-
-	while ((readed = read(ifp, buff, 1024)) > 0)
+	ofd = open(src, O_RDONLY);
+	if (!src || ofd == -1)
 	{
-		if (write(ofp, buff, readed) != readed || ofp == -1)
-			dprintf(2, "Error: Can't write to %s\n", file2), exit(99);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src);
+		exit(98);
 	}
-	if (readed == -1)
-		dprintf(2, "Error: Can't read from file %s\n", file1), exit(98);
 
-	if (close(ifp) == -1)
+	tfd = open(dest, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	while ((readed = read(ofd, buff, 1024)) > 0)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", ifp);
+		if (write(tfd, buff, readed) != readed || tfd == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest);
+			exit(99);
+		}
+	}
+
+	if (readed == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src);
+		exit(98);
+	}
+
+	if (close(ofd) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ofd);
 		exit(100);
 	}
-	if (close(ofp) == -1)
+
+	if (close(tfd) == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", ofp);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", tfd);
 		exit(100);
 	}
 }
