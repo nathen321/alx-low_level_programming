@@ -4,17 +4,19 @@
 
 /**
  * main - copy file into file
+ * @argc: ...
+ * @argv: ...
  *
  * Return: Always 0.
  */
-int main(int ac, char **av)
+int main(int argc, char **argv)
 {
-	if (ac != 3)
+	if (argc != 3)
 	{
-		dprintf(2, "Usage: %s file_from file_to\n", av[0]);
+		dprintf(2, "Usage: %s file_from file_to\n", argv[0]);
 		exit(97);
 	}
-	copy(av[1], av[2]);
+	copy(argv[1], argv[2]);
 	return (0);
 }
 
@@ -25,13 +27,14 @@ int main(int ac, char **av)
  *
  * Return: Always 0.
  */
-void copy(const char *file1,const char *file2)
+void copy(const char *file1, const char *file2)
 {
 	int ifp, ofp, readed;
 	char buff[1024];
+	mode_t perm = S_IRUSR | S_IWUSR | S_IWGRP | S_IRGRP | S_IROTH;
 
 	ifp = open(file1, O_RDONLY);
-	ofp = open(file2, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	ofp = open(file2, O_CREAT | O_WRONLY | O_TRUNC, perm);
 
 	if (ifp == -1 || !file1)
 	{
