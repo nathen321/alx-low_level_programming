@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
 /**
  * read_textfile - ....
@@ -13,7 +11,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int fd, readed;
 	char *buff = malloc(sizeof(char *) * letters);
 
-	if (filename == NULL)
+	if (filename == NULL || letters == 0)
 		return (0);
 
 	if (buff == NULL)
@@ -25,7 +23,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	readed = read(fd, buff, letters);
-	write(1, buff, readed);
+	write(STDOUT_FILENO, buff, readed);
 
 	free(buff);
 	close(fd);
