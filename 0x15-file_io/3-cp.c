@@ -47,6 +47,11 @@ void copy(const char *file1,const char *file2)
 			exit(99);
 		}
 	}
+	if (readed == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1);
+		exit(98);
+	}
 
 	if (close(ifp) == -1)
 	{
