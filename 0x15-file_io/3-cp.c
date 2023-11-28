@@ -41,6 +41,11 @@ void copy(const char *file1, const char *file2)
 		dprintf(2, "Error: Can't read from file %s\n", file1);
 		exit(98);
 	}
+	if (ofp == -1)
+	{
+		dprintf(2, "Error: Can't write to %s\n", file2);
+		exit(99);
+	}
 
 	while ((readed = read(ifp, buff, 1024)) > 0)
 	{
@@ -52,7 +57,7 @@ void copy(const char *file1, const char *file2)
 	}
 	if (readed == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1);
+		dprintf(2, "Error: Can't read from file %s\n", file1);
 		exit(98);
 	}
 
