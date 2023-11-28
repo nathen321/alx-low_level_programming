@@ -33,7 +33,7 @@ void copy(const char *file1,const char *file2)
 	ifp = open(file1, O_RDONLY);
 	ofp = open(file2, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
-	if (ifp == -1)
+	if (ifp == -1 || !file1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", file1);
 		exit(98);
