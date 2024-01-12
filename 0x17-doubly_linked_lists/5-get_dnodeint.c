@@ -3,9 +3,9 @@
 #include "lists.h"
 
 /**
- * add_dnodeint - check the code
+ * get_dnodeint_at_index - check the code
  * @head: node
- * @n: value
+ * @index: value
  *
  * Return: Always node.
  */
