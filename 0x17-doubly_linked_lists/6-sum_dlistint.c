@@ -8,7 +8,7 @@
  *
  * Return: Always node.
  */
-int sum_dlistint(dlistint_t *head);
+int sum_dlistint(dlistint_t *head)
 {
 	dlistint_t *nod = head;
 	int num = 0;
