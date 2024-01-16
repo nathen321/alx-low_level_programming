@@ -1,4 +1,3 @@
-#include "maine.h"
 #include <stdio.h>
 
 /**
