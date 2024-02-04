@@ -4,7 +4,9 @@
 #include "hash_tables.h"
 
 /**
- * main - check the code
+ * hash_table_get - check the code
+ * @get: ht
+ * @key:
  *
  * Return: Always EXIT_SUCCESS.
  */
@@ -18,10 +20,10 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 
 	idx = key_index((unsigned char *) key, ht->size);
 	node = ht->array[idx];
-	
+
 	if (node == NULL)
 		return (NULL);
-	
+
 	while (strcmp(key, node->key) != 0)
 		node = node->next;
 
