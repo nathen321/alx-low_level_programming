@@ -4,7 +4,10 @@
 #include "hash_tables.h"
 
 /**
- * main - check the code
+ * hash_table_set - check the code
+ * @ht: ...
+ * @key: ....
+ * @value: ...
  *
  * Return: Always EXIT_SUCCESS.
  */
@@ -15,7 +18,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (ht == NULL || key == NULL || (strcmp(key, "") == 0))
 		return (0);
-	index = key_index( (unsigned char *) key, ht->size);
+	index = key_index((unsigned char *) key, ht->size);
 
 	node = malloc(sizeof(hash_node_t));
 	if (node == NULL)
