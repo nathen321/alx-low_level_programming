@@ -5,8 +5,8 @@
 
 /**
  * hash_table_get - check the code
- * @get: ht
- * @key:
+ * @ht: ....
+ * @key: .....
  *
  * Return: Always EXIT_SUCCESS.
  */
