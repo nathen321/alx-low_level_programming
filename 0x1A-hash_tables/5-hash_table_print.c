@@ -4,9 +4,10 @@
 #include "hash_tables.h"
 
 /**
- * main - check the code
+ * hash_table_print - check the code
+ * @ht: ....
  *
- * Return: Always EXIT_SUCCESS.
+ * Return: NADA
  */
 void hash_table_print(const hash_table_t *ht)
 {
